@@ -2,6 +2,7 @@ from flask import Flask, request, render_template
 import cv2
 import numpy as np
 import base64 
+import os
 
 app = Flask(__name__, template_folder="interface", static_folder="interface", static_url_path="/")
 
@@ -140,6 +141,7 @@ def process():
     return render_template('index.html', input_b64=input_b64, output_b64=output_b64, op_label=label_map.get(op, op))
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.getenv("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=False)
 
     
