@@ -4,7 +4,7 @@ import numpy as np
 import base64 
 import os
 
-app = Flask(__name__, template_folder="interface", static_folder="interface", static_url_path="/")
+app = Flask(__name__, template_folder="Interface", static_folder="Interface", static_url_path="/")
 
 
 #Chuyển ảnh từ dạng upload sang ảnh numpy Để xl trong OpenCV
