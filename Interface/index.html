@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="./img/logo-light.svg" alt="">
+            </div>
+            <div class="nav">
+                <ul>
+                    <li class="item">About us</li>
+                    <li class="item">Product</li>
+                    <li class="item">Resource</li>
+                    <li class="item">Contact</li>
+                </ul>
+                <div class="convert-line">
+                    <div class="menu">
+                        <img onclick=shownavbar() src="./img/menu_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                    </div>
+                    <div class="button">
+                        <div class="moon">
+                            <img src="./img/Moon_fill_light.svg" alt="">
+                        </div>
+                        <div class="sun">
+                            <svg class="sunn" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM11 2C11 1.44772 11.4477 1 12 1C12.5523 1 13 1.44772 13 2V3C13 3.55228 12.5523 4 12 4C11.4477 4 11 3.55228 11 3V2ZM12 20C11.4477 20 11 20.4477 11 21V22C11 22.5523 11.4477 23 12 23C12.5523 23 13 22.5523 13 22V21C13 20.4477 12.5523 20 12 20ZM4 13C4.55228 13 5 12.5523 5 12C5 11.4477 4.55228 11 4 11H3C2.44772 11 2 11.4477 2 12C2 12.5523 2.44772 13 3 13H4ZM21 13C21.5523 13 22 12.5523 22 12C22 11.4477 21.5523 11 21 11H20C19.4477 11 19 11.4477 19 12C19 12.5523 19.4477 13 20 13H21ZM5.63604 5.63604C6.02656 6.02656 6.65973 6.02656 7.05025 5.63604C7.44078 5.24551 7.44078 4.61235 7.05025 4.22182L6.34314 3.51472C5.95262 3.12419 5.31945 3.12419 4.92893 3.51472C4.53841 3.90524 4.53841 4.53841 4.92893 4.92893L5.63604 5.63604ZM19.7782 19.7782C19.3877 20.1687 18.7545 20.1687 18.364 19.7782C17.9735 19.3877 17.9735 18.7545 18.364 18.364L19.0711 17.6569C19.4616 17.2663 20.0948 17.2663 20.4853 17.6569C20.8758 18.0474 20.8758 18.6805 20.4853 19.0711L19.7782 19.7782ZM18.364 5.63604C18.7545 6.02656 19.3877 6.02656 19.7782 5.63604L20.4853 4.92893C20.8758 4.53841 20.8758 3.90524 20.4853 3.51472C20.0948 3.12419 19.4616 3.12419 19.0711 3.51472L18.364 4.22183C17.9735 4.61235 17.9735 5.24552 18.364 5.63604ZM7.05025 19.7782C6.65973 20.1687 6.02656 20.1687 5.63604 19.7782L4.92893 19.0711C4.53841 18.6805 4.53841 18.0474 4.92893 17.6569C5.31945 17.2663 5.95262 17.2663 6.34314 17.6569L7.05025 18.364C7.44078 18.7545 7.44078 19.3877 7.05025 19.7782Z"
+                                    fill="currentColor" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar">
+                <div class="close">
+                    <img onclick=closeNavbar() src="./img/close-button.svg" alt="">
+                </div>
+                <ul>
+                    <li class="item">About us</li>
+                    <li class="item">Product</li>
+                    <li class="item">Resource</li>
+                    <li class="item">Contact</li>
+                </ul>
+                <div class="convert-line">
+                    <div class="button">
+                        <div class="moon">
+                            <img src="{{ url_for('static', filename='img/logo-light.svg') }}" alt="">
+                        </div>
+                        <div class="sun">
+                            <svg class="sunn" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM11 2C11 1.44772 11.4477 1 12 1C12.5523 1 13 1.44772 13 2V3C13 3.55228 12.5523 4 12 4C11.4477 4 11 3.55228 11 3V2ZM12 20C11.4477 20 11 20.4477 11 21V22C11 22.5523 11.4477 23 12 23C12.5523 23 13 22.5523 13 22V21C13 20.4477 12.5523 20 12 20ZM4 13C4.55228 13 5 12.5523 5 12C5 11.4477 4.55228 11 4 11H3C2.44772 11 2 11.4477 2 12C2 12.5523 2.44772 13 3 13H4ZM21 13C21.5523 13 22 12.5523 22 12C22 11.4477 21.5523 11 21 11H20C19.4477 11 19 11.4477 19 12C19 12.5523 19.4477 13 20 13H21ZM5.63604 5.63604C6.02656 6.02656 6.65973 6.02656 7.05025 5.63604C7.44078 5.24551 7.44078 4.61235 7.05025 4.22182L6.34314 3.51472C5.95262 3.12419 5.31945 3.12419 4.92893 3.51472C4.53841 3.90524 4.53841 4.53841 4.92893 4.92893L5.63604 5.63604ZM19.7782 19.7782C19.3877 20.1687 18.7545 20.1687 18.364 19.7782C17.9735 19.3877 17.9735 18.7545 18.364 18.364L19.0711 17.6569C19.4616 17.2663 20.0948 17.2663 20.4853 17.6569C20.8758 18.0474 20.8758 18.6805 20.4853 19.0711L19.7782 19.7782ZM18.364 5.63604C18.7545 6.02656 19.3877 6.02656 19.7782 5.63604L20.4853 4.92893C20.8758 4.53841 20.8758 3.90524 20.4853 3.51472C20.0948 3.12419 19.4616 3.12419 19.0711 3.51472L18.364 4.22183C17.9735 4.61235 17.9735 5.24552 18.364 5.63604ZM7.05025 19.7782C6.65973 20.1687 6.02656 20.1687 5.63604 19.7782L4.92893 19.0711C4.53841 18.6805 4.53841 18.0474 4.92893 17.6569C5.31945 17.2663 5.95262 17.2663 6.34314 17.6569L7.05025 18.364C7.44078 18.7545 7.44078 19.3877 7.05025 19.7782Z"
+                                    fill="currentColor" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="left">
+                <div class="contain">
+                    <div class="show-img">
+                        {% if input_b64 %}
+                        <img src="data:image/png;base64,{{ input_b64 }}" style="max-width:100%;height:auto" class="img-show">
+                        {% endif %}
+                    </div>
+                    <div class="operation">
+                        <form method="post" action="/process" enctype="multipart/form-data" class="operation">
+                            <!-- Chọn ảnh -->
+                            <button type="button" class="but-img choice-img"
+                                onclick="document.getElementById('fileInput').click()">Chọn ảnh từ máy</button>
+                            <input id="fileInput" type="file" name="image" accept="image/*" style="display:none"
+                                required>
+
+                            <div class="select-gamma">
+                                <!-- Chọn thuật toán: name phải là 'op' -->
+                                <select name="op" id="options" class="options">
+                                    <option value="log">Log transformation</option>
+                                    <option value="gamma">Gamma correction</option>
+                                    <option value="anhKemSang">Ảnh kém sáng</option>
+                                    <option value="anhYTe">Ảnh y tế</option>
+                                    <option value="histogram">Histogram Equalization</option>
+                                    <option value="clahe">CLAHE</option>
+                                </select>
+
+                                <!-- Gamma (tùy chọn) -->
+                                <input type="number" step="0.1" min="0.1" name="gamma" value="0.7"
+                                    placeholder="gamma (vd 0.7)" class="gamma">
+                            </div>
+
+                            <!-- Gửi lên server -->
+                            <button class="but-img processing-img" type="submit">Xử lý</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="right">
+                <div class="contain contain-right">
+                    <div class="show-img show-right">
+                        {% if output_b64 %}
+                        <img src="data:image/png;base64,{{ output_b64 }}" style="max-width:100%;height:auto" class="img-show">
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+</body>
+
+</html>
